@@ -5,4 +5,4 @@ const dbconnect = require('./mongodb')
     data = await data.find().toArray()
     console.log(data)
  }
- main()
+ main();
