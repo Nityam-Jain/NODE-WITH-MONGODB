@@ -1,8 +1,8 @@
 
 const dbconnect = require('./mongodb')
- const main = async ()=>{
+ const get = async ()=>{
     let data = await dbconnect();
     data = await data.find().toArray()
     console.log(data)
  }
- main();
+ get();
