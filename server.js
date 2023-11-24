@@ -4,6 +4,9 @@ const readApi = require('./routes/read')
 const createApi = require('./routes/create')
 const deleteApi = require('./routes/delete')
 const updateApi = require('./routes/update')
+const searchApi =  require('./routes/searchApi')
+const email = require('./routes/mail')
+
 const { url } = require('inspector')
 require('dotenv').config();
 
@@ -24,6 +27,9 @@ app.use('/api',readApi)
 app.use('/api',createApi)
 app.use('/api',deleteApi)
 app.use('/api',updateApi)
+app.use('/api',searchApi)
+app.use('/api',email)
+
 
 PORT = process.env.PORT
 app.listen(PORT,()=>{

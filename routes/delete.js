@@ -17,6 +17,11 @@ router.delete('/delete/:id',async(req,res)=>{
         console.log("Error Occured",error)
         res.status(500).send('Internal Server Error');
     }
-      res.send("Sucessfully Deleted")
+      res.send(
+        {
+            message: "Sucessfully Deleted",
+           
+        }
+        )
     })
 module.exports = router;
